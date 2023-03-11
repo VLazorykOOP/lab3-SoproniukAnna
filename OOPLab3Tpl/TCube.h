@@ -20,5 +20,6 @@ public:
 	double Digonal();
 	double VolumeSphere();
 	void Print();
+	void PrintAll();
 };
 

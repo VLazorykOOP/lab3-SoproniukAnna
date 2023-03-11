@@ -7,7 +7,7 @@
 
 // Ваші файли заголовки 
 //
-#include "Lab3Example.h"
+#include "TCube.h"
 
 using namespace std;
 
@@ -18,10 +18,6 @@ int main()
 //  Головне меню завдань
 //  Функції та класи можуть знаходитись в інших файлах проекту
 
-    int conv = 1;
-    if (conv == 1) conv = mainExample1();
-    if (conv == 1) conv = mainExample3(); 
-    if (conv == 1) conv = mainExample4();
-
+    
 }
 

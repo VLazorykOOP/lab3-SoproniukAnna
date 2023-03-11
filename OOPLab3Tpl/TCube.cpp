@@ -1,4 +1,7 @@
+#define _USE_MATH_DEFINES
 #include "TCube.h"
+#include <iostream>
+#include <cmath>
 
 TCube::TCube() : side(1), color(0)
 {
@@ -18,3 +21,27 @@ TCube::TCube(TCube& cube)
 }
 
 TCube::~TCube(){}
+
+void TCube::SetSide(double val)
+{
+	if (val > 0)
+		this->side = val;
+}
+
+double TCube::GetSide()
+{
+	return this->side;
+}
+
+void TCube::SetColor(unsigned int val)
+{
+	this->color = val;
+}
+
+unsigned int TCube::GetColor()
+{
+	return this->color;
+}
+
+
+
