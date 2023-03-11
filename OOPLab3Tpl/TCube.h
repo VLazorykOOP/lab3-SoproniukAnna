@@ -17,7 +17,7 @@ public:
 
 	double SurfaceArea();
 	double Volume();
-	double Digonal();
+	double Diagonal();
 	double VolumeSphere();
 	void Print();
 	void PrintAll();
