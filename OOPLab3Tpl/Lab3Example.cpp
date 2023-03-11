@@ -15,9 +15,11 @@ public:
 	Icosahedron() : a(1.0), color(0) {}
 	Icosahedron(double ai) : a(ai), color(0) {}
 	Icosahedron(int ic) : a(1.0) { if (ic >= 0) color = ic; else color = 0; }
-	Icosahedron(double a, int c) {
+	Icosahedron(double a, int c) 
+	{
 		this->a = a;
-		if (c >= 0) color = c; else color = 0;
+		if (c >= 0) color = c; 
+		else color = 0;
 	}
 	double getA() const
 	{

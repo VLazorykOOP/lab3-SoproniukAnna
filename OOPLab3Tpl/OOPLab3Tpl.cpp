@@ -5,12 +5,15 @@
 
 #include <iostream>
 
-// Ваші файли загловки 
+// Ваші файли заголовки 
 //
 #include "Lab3Example.h"
+
+using namespace std;
+
 int main()
 {
-    std::cout << " Lab #3  !\n";
+    cout << " Laboratorna #3 " << endl;
 //  Код виконання завдань
 //  Головне меню завдань
 //  Функції та класи можуть знаходитись в інших файлах проекту
