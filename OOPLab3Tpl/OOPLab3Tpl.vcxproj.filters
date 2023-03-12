@@ -24,12 +24,24 @@
     <ClCompile Include="TCube.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="TMnojina.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="TPlural.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Lab3Example.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="TCube.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="TMnojina.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="TPlural.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

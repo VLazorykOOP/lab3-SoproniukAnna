@@ -142,10 +142,14 @@
     <ClCompile Include="Lab3Example.cpp" />
     <ClCompile Include="OOPLab3Tpl.cpp" />
     <ClCompile Include="TCube.cpp" />
+    <ClCompile Include="TMnojina.cpp" />
+    <ClCompile Include="TPlural.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Lab3Example.h" />
     <ClInclude Include="TCube.h" />
+    <ClInclude Include="TMnojina.h" />
+    <ClInclude Include="TPlural.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
