@@ -74,10 +74,10 @@ void TCube::Print()
 void TCube::PrintAll()
 {
 	this->Print();
-	std::cout << "SurfaceArea:\t" << this->SurfaceArea() << std::endl;
+	std::cout << "Surface area:\t" << this->SurfaceArea() << std::endl;
 	std::cout << "Volume:\t\t" << this->Volume() << std::endl;
 	std::cout << "Digonal:\t" << this->Diagonal() << std::endl;
-	std::cout << "VolumeSphere:\t" << this->VolumeSphere() << std::endl;
+	std::cout << "Volume sphere:\t" << this->VolumeSphere() << std::endl;
 	std::cout << std::endl;
 
 }

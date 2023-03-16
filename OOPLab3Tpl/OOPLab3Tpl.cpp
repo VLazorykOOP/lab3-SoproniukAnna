@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include "TCube.h"
+#include "TPlural.h"
 
 void MenuTask1()
 {
