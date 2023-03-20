@@ -3,10 +3,11 @@ class TPlural
 {
 private:
 	unsigned int* arr = nullptr;
-	unsigned int beg = 0;
-	unsigned int end = 0;
-	unsigned int value = 0;
+	unsigned int beg;
+	unsigned int end;
+	unsigned int count;
 	unsigned int state = 0; //0 ok; 1 memory error; 2 range read error; 3 range wrire error
+
 public:
 	TPlural();
 	TPlural(unsigned int);

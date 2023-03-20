@@ -76,8 +76,10 @@ void MenuTask1()
 
 
 }
-void MenuTask2();
-void MenuTask3();
+void MenuTask2()
+{}
+void MenuTask3()
+{}
 
 void MainMenu()
 {

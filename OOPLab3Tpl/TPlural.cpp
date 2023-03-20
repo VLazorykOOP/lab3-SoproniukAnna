@@ -1,31 +1,31 @@
 #include "TPlural.h"
 
-TPlural::TPlural() : beg(0), end(100), state(0), arr(nullptr)
+TPlural::TPlural() : TPlural(0, 100, 0){}
+
+TPlural::TPlural(unsigned int e) : TPlural(0, e, 0){}
+
+TPlural::TPlural(unsigned int b, unsigned int e) : TPlural(b, e, 0){}
+
+TPlural::TPlural(unsigned int b, unsigned int e, unsigned int val) : beg(b), end(e), state(0)
 {
-	this->arr = new unsigned int[beg - end];
+	this->count = this->end - this->beg + 1;
+	this->arr = new unsigned int[this->count] {val};
 }
 
-TPlural::TPlural(unsigned int end) : beg(0), state(0), arr(nullptr)
+TPlural::TPlural(const TPlural& p)
 {
-	this->arr = new unsigned int[beg - end];
-}
-
-TPlural::TPlural(unsigned int beg, unsigned int end) : state(0), arr(nullptr)
-{
-	this->arr = new unsigned int[beg - end];
-}
-
-TPlural::TPlural(unsigned int beg, unsigned int end, unsigned int val) : state(0)
-{
-	this->arr = new unsigned int[beg - end] {val};
-}
-
-TPlural::TPlural(const TPlural&)
-{
+	this->beg = p.beg;
+	this->end = p.end;
+	this->count = this->end - this->beg + 1;
+	this->state = p.state;
+	this->arr = new unsigned int[this->count];
+	for (unsigned int i = 0; i < this->count; i++)
+		this->arr[i] = p.arr[i];
 }
 
 TPlural::~TPlural()
 {
+	delete[] this->arr;
 }
 
 void TPlural::SetElement(unsigned int elem, unsigned int val)
