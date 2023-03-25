@@ -76,10 +76,8 @@ void MenuTask1()
 
 
 }
-void MenuTask2()
-{}
-void MenuTask3()
-{}
+void MenuTask2(){}
+//void MenuTask3(){}
 
 void MainMenu()
 {
@@ -89,7 +87,7 @@ void MainMenu()
 	{
 		std::cout << "1. Task 1" << std::endl;
 		std::cout << "2. Task 2" << std::endl;
-		std::cout << "3. Task 3" << std::endl;
+		//std::cout << "3. Task 3" << std::endl;
 		std::cout << "0. Exit" << std::endl;
 		std::cin >> select;
 		switch (select)

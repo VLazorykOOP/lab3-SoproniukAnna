@@ -115,3 +115,95 @@ void TPlural::Union(const TPlural& p)
 		this->arr = tmparr;
 	}
 }
+
+void TPlural::Intersection(const TPlural& p)
+{
+	unsigned int tmpbeg = this->beg;
+	if (tmpbeg < p.beg)
+		tmpbeg = p.beg;
+	unsigned int tmpend = this->end;
+	if (tmpend > p.end)
+		tmpend = p.end;
+	unsigned int tmpcount = tmpend - tmpbeg + 1;
+	unsigned int* tmparr = new unsigned int[tmpcount] {};
+	if (tmparr == nullptr)
+		this->state = 1;
+
+	for (unsigned int elem = tmpbeg; elem <= tmpend; elem++)
+	{
+		tmparr[elem - tmpbeg] = this->arr[elem - this->beg]; //minimum
+		if (tmparr[elem - tmpbeg] > p.arr[elem - p.beg]) 
+			tmparr[elem - tmpbeg] = p.arr[elem - p.beg];
+	}
+
+	this->beg = tmpbeg;
+	this->end = tmpend;
+	this->count = tmpcount;
+	delete[] this->arr;
+	this->arr = tmparr;
+}
+
+void TPlural::Difference(const TPlural& p)
+{
+	unsigned int tmpbeg = this->beg;
+	if (tmpbeg < p.beg)
+		tmpbeg = p.beg;
+	unsigned int tmpend = this->end;
+	if (tmpend > p.end)
+		tmpend = p.end;
+	for (unsigned int elem = tmpbeg; elem <= tmpend; elem++)
+	{
+		if (this->arr[elem - this->beg] > p.arr[elem - p.beg])
+			this->arr[elem - this->beg] -= p.arr[elem - p.beg];
+		else
+			this->arr[elem - this->beg] = 0;
+	}
+}
+
+bool TPlural::More(const TPlural& p)
+{
+	unsigned int sumThis = 0;
+	for (unsigned int elem = this->beg; elem <= this->end; elem++)
+		sumThis += this->arr[elem - this->beg];
+	unsigned int sumP = 0;
+	for (unsigned int elem = p.beg; elem <= p.end; elem++)
+		sumP += p.arr[elem - p.beg];
+
+	if (sumThis > sumP)
+		return true;
+	else
+		return false;
+}
+
+bool TPlural::Less(const TPlural& p)
+{
+	unsigned int sumThis = 0;
+	for (unsigned int elem = this->beg; elem <= this->end; elem++)
+		sumThis += this->arr[elem - this->beg];
+	unsigned int sumP = 0;
+	for (unsigned int elem = p.beg; elem <= p.end; elem++)
+		sumP += p.arr[elem - p.beg];
+
+	if (sumThis < sumP)
+		return true;
+	else
+		return false;
+	
+}
+
+bool TPlural::Equally(const TPlural& p)
+{
+	if (this->beg!=p.beg)
+		return false;
+	if (this->end != p.end)
+		return false;
+	for (unsigned int elem = this->beg; elem <= this->end; elem++)
+		if (this->arr[elem - this->beg] != p.arr[elem - p.beg])
+			return false;
+	return true;
+}
+
+bool TPlural::NotEqually(const TPlural& p)
+{
+	return !this->Equally(p);
+}

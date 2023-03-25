@@ -24,13 +24,15 @@ public:
 	
 	void Print();
 	void Union(const TPlural&);
-	void Crossing(const TPlural&);
+	void Intersection(const TPlural&);
 	void Difference(const TPlural&);
 
-	//по кількості елементів
-	bool More(); 
-	bool Less(); 
-	bool Equally();
-	bool NotEqually();
+	
+	bool More(const TPlural&); //по кількості елементів
+	bool Less(const TPlural&); //по кількості елементів
+	bool Equally(const TPlural&);
+	bool NotEqually(const TPlural&);
+
+
 };
 

@@ -79,7 +79,6 @@ void TCube::PrintAll()
 	std::cout << "Digonal:\t" << this->Diagonal() << std::endl;
 	std::cout << "Volume sphere:\t" << this->VolumeSphere() << std::endl;
 	std::cout << std::endl;
-
 }
 
 
