@@ -6,7 +6,7 @@ private:
 	unsigned int beg;
 	unsigned int end;
 	unsigned int count;
-	unsigned int state = 0; //0 ok; 1 memory error; 2 range read error; 3 range wrire error
+	unsigned int state = 0; //0 ok; 1 memory error; 2 range read error; 3 range wrire error; 4 incorrect data error
 
 public:
 	TPlural();
@@ -36,8 +36,5 @@ public:
 	bool Less(const TPlural&); //по кількості елементів
 	bool Equally(const TPlural&);
 	bool NotEqually(const TPlural&);
-	
-
-
 };
 

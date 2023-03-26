@@ -14,6 +14,7 @@ TPlural::TPlural(unsigned int b, unsigned int e, unsigned int val) : beg(b), end
 		unsigned int tmp = this->beg;
 		this->beg = this->end;
 		this->end = tmp;
+		this->state = 4;
 	}
 	this->count = this->end - this->beg + 1;
 	this->arr = new unsigned int[this->count] {val};
