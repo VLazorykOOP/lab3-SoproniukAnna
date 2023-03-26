@@ -16,6 +16,10 @@ public:
 	TPlural(const TPlural&);
 	~TPlural();
 
+
+	unsigned int GetBegin(unsigned int);
+	unsigned int GetEnd(unsigned int);
+	//unsigned int GetCount(unsigned int);
 	void SetElement(unsigned int elem, unsigned int val);
 	unsigned int GetElement(unsigned int);
 	unsigned int GetState();
@@ -32,6 +36,7 @@ public:
 	bool Less(const TPlural&); //по кількості елементів
 	bool Equally(const TPlural&);
 	bool NotEqually(const TPlural&);
+	
 
 
 };

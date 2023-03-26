@@ -9,8 +9,16 @@ TPlural::TPlural(unsigned int b, unsigned int e) : TPlural(b, e, 0){}
 
 TPlural::TPlural(unsigned int b, unsigned int e, unsigned int val) : beg(b), end(e), state(0)
 {
+	if (this->beg > this->end)
+	{
+		unsigned int tmp = this->beg;
+		this->beg = this->end;
+		this->end = tmp;
+	}
 	this->count = this->end - this->beg + 1;
 	this->arr = new unsigned int[this->count] {val};
+	for (unsigned int i = 0; i < count; i++)
+		this->arr[i] = val;
 	if (this->arr == nullptr)
 		this->state = 1;
 }
@@ -50,6 +58,16 @@ unsigned int TPlural::GetElement(unsigned int elem)
 	return 0;
 }
 
+unsigned int TPlural::GetBegin(unsigned int)
+{
+	return this->beg;
+}
+
+unsigned int TPlural::GetEnd(unsigned int)
+{
+	return this->end;
+}
+
 unsigned int TPlural::GetState()
 {
 	return this->state;
@@ -83,6 +101,7 @@ void TPlural::Print()
 	std::cout << "State:\t" << this->state << std::endl;
 	for (unsigned int i = 0; i < this->count; i++)
 		std::cout << "\t" << this->beg + i << "\t:\t" << this->arr[i] << std::endl;
+
 }
 
 void TPlural::Union(const TPlural& p)
@@ -207,3 +226,5 @@ bool TPlural::NotEqually(const TPlural& p)
 {
 	return !this->Equally(p);
 }
+
+
