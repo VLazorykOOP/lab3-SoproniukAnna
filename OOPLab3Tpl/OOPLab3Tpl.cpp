@@ -77,6 +77,7 @@ void MenuTask2()
 
 	system("cls");
 	TPlural* plural = nullptr;
+	plural = new TPlural();
 	int select = 0;
 	do
 	{
@@ -84,6 +85,7 @@ void MenuTask2()
 		std::cout << "2.  Input end " << std::endl;
 		std::cout << "3.  Input begin and end " << std::endl;
 		std::cout << "4.  Input begin, end and value " << std::endl;
+
 		std::cout << "5.  Output union " << std::endl;
 		std::cout << "6.  Output intersection " << std::endl;
 		std::cout << "7.  Output difference " << std::endl;
@@ -101,6 +103,7 @@ void MenuTask2()
 			delete plural;
 			plural = new TPlural;
 			plural->Print();
+			std::cout << std::endl;
 		}
 		else if (select == 2)
 		{
@@ -110,6 +113,7 @@ void MenuTask2()
 			delete plural;
 			plural = new TPlural(end);
 			plural->Print();
+			std::cout << std::endl;
 		}
 		else if (select == 3)
 		{
@@ -121,6 +125,7 @@ void MenuTask2()
 			delete plural;
 			plural = new TPlural(beg, end);
 			plural->Print();
+			std::cout << std::endl;
 		}
 		else if (select == 4)
 		{
@@ -134,6 +139,7 @@ void MenuTask2()
 			delete plural;
 			plural = new TPlural(beg, end, val);
 			plural->Print();
+			std::cout << std::endl;
 		}
 		else if (select == 5)
 		{
@@ -153,6 +159,7 @@ void MenuTask2()
 			}
 			plural->Union(tmpPlural);
 			plural->Print();
+			std::cout << std::endl;
 		}
 		else if (select == 6)
 		{
@@ -172,6 +179,7 @@ void MenuTask2()
 			}
 			plural->Intersection(tmpPlural);
 			plural->Print();
+			std::cout << std::endl;
 		}
 		else if (select == 7)
 		{
@@ -191,6 +199,7 @@ void MenuTask2()
 			}
 			plural->Difference(tmpPlural);
 			plural->Print();
+			std::cout << std::endl;
 		}
 		else if (select == 8)
 		{
@@ -214,6 +223,7 @@ void MenuTask2()
 				std::cout << "More" << std::endl;
 			else
 				std::cout << "Not more" << std::endl;
+			std::cout << std::endl;
 		}
 		else if (select == 9)
 		{
@@ -237,6 +247,7 @@ void MenuTask2()
 				std::cout << "Less" << std::endl;
 			else
 				std::cout << "Not less" << std::endl;
+			std::cout << std::endl;
 		}
 		else if (select == 10)
 		{
@@ -248,7 +259,7 @@ void MenuTask2()
 			std::cout << "Input end: ";
 			std::cin >> end;
 			TPlural tmpPlural(beg, end);
-			
+
 			for (unsigned int i = beg; i <= end; i++)
 			{
 				std::cout << "Input count of " << i << ": ";
@@ -260,6 +271,7 @@ void MenuTask2()
 				std::cout << "Equally" << std::endl;
 			else
 				std::cout << "Not equally" << std::endl;
+			std::cout << std::endl;
 		}
 		else if (select == 11)
 		{
@@ -281,6 +293,7 @@ void MenuTask2()
 				std::cout << "Not equally" << std::endl;
 			else
 				std::cout << "Equally" << std::endl;
+			std::cout << std::endl;
 		}
 
 	} while (select != 0);
